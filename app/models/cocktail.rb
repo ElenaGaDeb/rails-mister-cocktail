@@ -4,6 +4,8 @@ class Cocktail < ApplicationRecord
 
   validates :name, uniqueness: true
   validates :name, presence: true
+  #validates :photo, presence: true
   #validates :ingredient, uniqueness: { scope: :cocktail}
+  mount_uploader :photo, PhotoUploader
 
 end
